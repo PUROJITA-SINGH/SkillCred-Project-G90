@@ -47,69 +47,6 @@ Content Management: Headless CMS (e.g., Sanity, Contentful, Strapi)
 Backend (not included): LLM (e.g., GPT-3/4, PaLM), email service (e.g., SendGrid)
 
 
-🚀 Getting Started
-PriceAI Backend
-Prerequisites
-
-Python 3.8+
-Dependencies: pip install selenium flask-cors requests aiohttp beautifulsoup4 scikit-learn pandas numpy nltk textblob spacy joblib (optional: torch torchvision for image analysis)
-Chrome WebDriver for Selenium
-SQLite for database storage
-
-Installation
-
-Clone the repository:git clone https://github.com/your-repo/priceai-social-donation.git
-cd priceai-social-donation
-
-
-Install dependencies:pip install -r requirements.txt
-
-
-(Optional) Set up Chrome WebDriver for Selenium.
-Run the application:
-API Mode: python main.py --mode api --host 0.0.0.0 --port 5000
-Train Mode: python main.py --mode train
-Test Mode: python main.py --mode test --product "iPhone 13"
-
-
-
-Usage
-
-API Endpoints:
-/api/predict: Predict price for a single product (POST).
-/api/batch-predict: Predict prices for CSV data (POST).
-/api/train: Train ML models (POST).
-/api/stats: Get system statistics (GET).
-/api/similar: Find similar products (POST).
-/api/market-trends: View market trends (GET).
-
-
-Sample Data: If no model exists, the system generates 100 mock products for training.
-
-Social Donation Website
-Prerequisites
-
-A Stripe account with a publishable key.
-A backend server (not included) for Stripe payment intent and LLM integration.
-A headless CMS (e.g., Sanity, Contentful) for campaign data.
-An email service (e.g., SendGrid) for donor communication.
-
-Installation
-
-Clone the repository (if not already done):git clone https://github.com/your-repo/priceai-social-donation.git
-cd priceai-social-donation/SocialDonationWebsite
-
-
-Open index.html in a web browser for local testing.
-Configure Stripe with your publishable key in the <script> section.
-Set up a backend server to handle Stripe webhooks and LLM/email integration.
-
-Usage
-
-Navigate the single-page site to select donation amounts and process payments via Stripe.
-The impact meter updates dynamically to reflect contributions.
-Backend (not included) handles personalized thank-you emails and impact summaries.
-
 
 📄 Code Structure
 PriceAI Backend
